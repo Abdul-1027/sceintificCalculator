@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dark">#121212</color>
+    <color name="btn_clear">#C0392B</color>
+    <color name="btn_equals">#2E7D32</color>
+    <color name="btn_function">#333A45</color>
+    <color name="btn_number">#2A2A2A</color>
+    <color name="btn_operator">#FF9500</color>
+    <color name="display_bg">#1E1E1E</color>
+    <color name="ic_launcher_background">#FF9500</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <string name="app_name">Scientific Calculator</string>
+    <style name="CalcBaseButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/btn_ripple_bg</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="CalcClearButton" parent="CalcBaseButton">
+        <item name="android:backgroundTint">@color/btn_clear</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="CalcEqualsButton" parent="CalcBaseButton">
+        <item name="android:backgroundTint">@color/btn_equals</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="CalcFuncButton" parent="CalcBaseButton">
+        <item name="android:backgroundTint">@color/btn_function</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="CalcNumButton" parent="CalcBaseButton">
+        <item name="android:backgroundTint">@color/btn_number</item>
+    </style>
+    <style name="CalcOpButton" parent="CalcBaseButton">
+        <item name="android:backgroundTint">@color/btn_operator</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.ScientificCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="colorPrimary">@color/btn_operator</item>
+    </style>
+</resources>

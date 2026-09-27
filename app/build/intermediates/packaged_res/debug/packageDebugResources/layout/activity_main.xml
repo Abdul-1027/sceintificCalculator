@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark">
+
+    <!-- Display area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@color/display_bg"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="DEG"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <TextView
+                android:id="@+id/tvExpression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="@color/text_secondary"
+                android:textSize="24sp"
+                android:text=""
+                android:maxLines="2"/>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/text_primary"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:text="0"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:ellipsize="start"/>
+    </LinearLayout>
+
+    <!-- Button grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:columnCount="5"
+        android:rowCount="7"
+        android:padding="6dp">
+
+        <!-- Row 0 -->
+        <Button android:id="@+id/btnDegRad" style="@style/CalcFuncButton" android:text="DEG" />
+        <Button android:id="@+id/btnParenOpen" style="@style/CalcFuncButton" android:text="(" />
+        <Button android:id="@+id/btnParenClose" style="@style/CalcFuncButton" android:text=")" />
+        <Button android:id="@+id/btnPercent" style="@style/CalcFuncButton" android:text="%" />
+        <Button android:id="@+id/btnClear" style="@style/CalcClearButton" android:text="AC" />
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btnSin" style="@style/CalcFuncButton" android:text="sin" />
+        <Button android:id="@+id/btnCos" style="@style/CalcFuncButton" android:text="cos" />
+        <Button android:id="@+id/btnTan" style="@style/CalcFuncButton" android:text="tan" />
+        <Button android:id="@+id/btnSqrt" style="@style/CalcFuncButton" android:text="&#8730;" />
+        <Button android:id="@+id/btnDivide" style="@style/CalcOpButton" android:text="&#247;" />
+
+        <!-- Row 2 -->
+        <Button android:id="@+id/btnLog" style="@style/CalcFuncButton" android:text="log" />
+        <Button android:id="@+id/btnLn" style="@style/CalcFuncButton" android:text="ln" />
+        <Button android:id="@+id/btnPow" style="@style/CalcFuncButton" android:text="x^y" />
+        <Button android:id="@+id/btnFactorial" style="@style/CalcFuncButton" android:text="x!" />
+        <Button android:id="@+id/btnMultiply" style="@style/CalcOpButton" android:text="&#215;" />
+
+        <!-- Row 3 -->
+        <Button android:id="@+id/btn7" style="@style/CalcNumButton" android:text="7" />
+        <Button android:id="@+id/btn8" style="@style/CalcNumButton" android:text="8" />
+        <Button android:id="@+id/btn9" style="@style/CalcNumButton" android:text="9" />
+        <Button android:id="@+id/btnDel" style="@style/CalcFuncButton" android:text="DEL" />
+        <Button android:id="@+id/btnSubtract" style="@style/CalcOpButton" android:text="&#8722;" />
+
+        <!-- Row 4 -->
+        <Button android:id="@+id/btn4" style="@style/CalcNumButton" android:text="4" />
+        <Button android:id="@+id/btn5" style="@style/CalcNumButton" android:text="5" />
+        <Button android:id="@+id/btn6" style="@style/CalcNumButton" android:text="6" />
+        <Button android:id="@+id/btnPi" style="@style/CalcFuncButton" android:text="&#960;" />
+        <Button android:id="@+id/btnAdd" style="@style/CalcOpButton" android:text="+" />
+
+        <!-- Row 5 -->
+        <Button android:id="@+id/btn1" style="@style/CalcNumButton" android:text="1" />
+        <Button android:id="@+id/btn2" style="@style/CalcNumButton" android:text="2" />
+        <Button android:id="@+id/btn3" style="@style/CalcNumButton" android:text="3" />
+        <Button android:id="@+id/btnE" style="@style/CalcFuncButton" android:text="e" />
+        <Button
+            android:id="@+id/btnEquals"
+            style="@style/CalcEqualsButton"
+            android:text="="
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill_vertical" />
+
+        <!-- Row 6 -->
+        <Button
+            android:id="@+id/btn0"
+            style="@style/CalcNumButton"
+            android:text="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal" />
+        <Button android:id="@+id/btnDot" style="@style/CalcNumButton" android:text="." />
+        <Button
+            android:id="@+id/btnBackspaceFiller"
+            style="@style/CalcNumButton"
+            android:text=""
+            android:visibility="invisible" />
+
+    </GridLayout>
+
+</LinearLayout>

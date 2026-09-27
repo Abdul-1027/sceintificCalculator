@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.scientificcalculator.app-merged_res-31:/drawable_btn_ripple_bg.xml.flat",
+        "source": "com.example.scientificcalculator.app-main-33:/drawable/btn_ripple_bg.xml"
+    },
+    {
+        "merged": "com.example.scientificcalculator.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.scientificcalculator.app-main-33:/layout/activity_main.xml"
+    }
+]
